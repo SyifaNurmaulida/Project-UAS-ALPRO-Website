@@ -1,0 +1,251 @@
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+/* Mengatur margin, padding, dan perilaku gulir halus */
+body {
+    background-color: rgb(224, 56, 210);
+    font-family: 'poppins', sans-serif;
+    color: #fff;5
+}
+/* Mengatur warna latar belakang, jenis font, dan warna teks untuk seluruh halaman */
+
+nav {
+    display: flex;
+    height: 65px;
+    border-bottom: 2px solid #513c28;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+/* Mengatur tata letak navbar dengan posisi, tinggi, dan garis bawah */
+.navbar-logo {
+    color: #d093b0;
+    position: absolute;
+    left: 50px;
+    font-size: 33px;
+    font-weight: 700;
+    font-style: italic;
+}
+/* Mengatur gaya untuk navbar logo */
+
+.navbar-list {
+    position: absolute;
+    right: 250px;
+}
+/* Mengatur tata letak daftar navigasinya */
+
+a {
+    color: #d893bd;
+    font-size: 18px;
+    margin : 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c190ad;
+}
+
+
+.homepage {
+    display: flex;
+    height: 86vh;
+    width: auto;
+    background-image: url(Cafe.jpg);
+    background-size: 40%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+/* Style Home Page, mengatur latar belakang, tata letak, dan ukuran untuk halaman utama */
+
+main {
+    padding-top: 120px;
+    margin-left: 100px;
+    font-style: italic;
+}
+/* Mengatur tata letak untuk isi halaman utama */
+
+
+#h1-homepage {
+    color: #fff;
+    font-size: 40px;
+}
+/* Mengatur gaya untuk judul halaman utama */
+
+.p-homepage {
+    color:#fff;
+    margin-left: 150px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1.2px solid white;
+    border-radius: 0.5rem;
+}
+/* Mengatur gaya untuk judul halaman utama */
+
+span {
+    color: #c385cf;
+}
+
+.about{
+    padding: 1.5rem 7% 1.4rem;
+    height: 90vh;
+}
+/* Mengatur padding dan tinggi untuk bagian about */
+
+h2 {
+    text-align: center;
+    font-size: 33px;
+    color: #d684c8;
+}
+
+.about-img {
+    float: right;
+}
+/* Mengatur tata letak gambar di bagian about */
+
+img {
+    margin-top: 15px;
+    width: 400px;
+    height: 350px;
+}
+
+
+.about-isi {
+    padding: 10px 50px;
+    overflow: hidden;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: justify; 
+    text-indent: 50px;
+}
+/* Mengatur gaya teks deskripsi di bagian about */
+
+.menu, .promo, .info, .promo{
+    padding-top: 15px;
+    height: 90vh;
+}
+.list-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* Mengatur tata letak daftar menu */
+
+.items-menu {
+    text-align: center;
+    margin-top: 20px;
+}
+/* Mengatur tata letak dan gaya untuk setiap item menu */
+
+.img-menu {
+    width: 65%;
+    height: auto;
+    border: 1px solid white;
+    
+}
+/* Mengatur ukuran gambar di menu */
+
+.title-menu {
+margin-top: 15px;
+}
+
+
+.promo-item {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+/* Mengatur tata letak untuk item promosi */
+
+.img-promo {
+    margin: 30px;
+    padding-left: 50px;
+    width: 350px;
+    height: auto;
+}
+.promo-item {
+    margin: 0px;
+}
+/* Mengatur tata letak untuk item promosi */
+
+.isi-promo {
+    border: 3px solid #c08a52;
+    padding: 10px 10px;
+    text-align: justify;
+    margin: 50px 20px;
+    margin-right: 60px;
+    line-height: 30px;
+    height: auto;
+}
+/* Mengatur tata letak untuk item promosi */
+
+.h2-promo {
+    
+    margin: 10px;
+    text-align: start;
+    font-size: 23px;
+}
+
+.p-promo {
+    font-size: 13px;
+    margin: 10px;
+}
+/* Mengatur tata letak untuk promosi */
+
+.map {
+    display: flex;
+    width: 80%;
+    height: auto;
+}
+/* Mengatur tata letak pada peta lokasi */
+
+.list-info {
+    display: flex;
+    padding-left: 100px;
+}
+/* Mengatur tata letak informasi pada peta lokasi */
+
+.waktu {
+    border: 3px solid #d19fc6;
+    margin: 50px;
+}
+.h3-waktu {
+    color: black;
+    margin: 30px;
+    background-color: white;
+    border: 3px solid white;
+    width: 500px;
+    text-align: center;
+    font-size: 15px;
+}
+/* Mengatur tata letak dan gaya untuk informasi waktu operasional */
+
+.footer {
+    border-top: 2px solid #ba8dae;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+/* Mengatur tata letak dan gaya untuk footer */
+
+.footer-logo {
+    color: #bd91ac;
+    position: absolute;
+    left: 50px;
+    font-size: 22px;
+    font-style: italic;
+}
+/* Mengatur gaya untuk logo footer */
+
+.p-footer {
+    color: #a594a1;
+    position: absolute;
+    right: 50px;
+    font-size: 22px;
+    font-style: italic;
+}
+/* Mengatur gaya untuk nomor kontak di bagian footer */

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--mendefinisikan type dokumen sebagai html dan memulai elemen html-->  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Star Cafe</title>
+<!--bagiann kepala dokumen,yang berisi meta informasi dan link ke sumber daya eksternal-->  
+
+    <!--Jenis Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,700&display=swap" rel="stylesheet">
+
+    <!--Feather Icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+<!--bagiann ini adalah font dan icons, dimana menghubungkan font dan ikon feather dari goggle-->  
+
+
+    <!-- Style CSS-->
+    <link rel="icon" href="favicon1.png">
+    <link rel="stylesheet" href="style.css" />
+<!--bagiann style dan favicon, yang menghubungkan favicon dan stylesheet eksternal serta menambahkan CSS internal untuk responsivitas -->  
+
+
+
+    <!-- Internal CSS for responsiveness -->
+    <style>
+        .order-button { /* gaya untuk tombol order */
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-button:hover { /* gaya untuk hover tombol order */
+            background-color: #e67e22;
+        }
+
+        .cart-button { /* gaya untuk tombol keranjang
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .cart-button:hover { /* gaya untuk hover tombol keranjang */
+            background-color: #27ae60;
+        }
+
+        .cart { /* gaya untuk elemen keranjang */
+            margin: 20px 0;
+        }
+
+        .cart-item { /* gaya untuk item keranjang */
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cart-total { /* gaya untuk total harga keranjang */
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .items-menu {
+                margin-bottom: 20px;
+            }
+
+            .img-menu {
+                width: 100%;
+                height: auto;
+            }
+
+            .order-button, .cart-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigasi Bar mulai, menampilkan logo dan daftar tautan navigasi-->
+    <nav id="home">
+        <h2 class="navbar-logo">Lucky Star Cafe</h2>
+        <div class="navbar-list">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#promo">Promo</a>
+            <a href="#lokasi">Lokasi</a>
+        </div>
+    </nav>
+    <!-- Navigasi Bar selesai-->
+
+    <!-- Halaman Utama  dimulai -->
+     <!-- menampilkan judul utama dan tombol ajakan untuk berkunjung-->
+    <section class="homepage">
+        <main>
+            <h1 id="h1-homepage">
+                Creating Beautiful Moment <br>In <span>Remarkable Place</span>
+            </h1>
+            <a href="" class="p-homepage">Visit Now</a>
+        </main>
+    </section>
+    <!-- Halaman Utama selesai -->
+
+    <!-- Tentang About -->
+     <!-- menampilkan informasi tentang cafe dengan gambar dan teks deskripsi -->
+    <section class="about" id="about">
+        <h2>ABOUT</h2>
+        <div class="about-img">
+            <img src="about.jpeg" alt="tentang kami">
+        </div>
+        <div class="about-isi">
+            <p>
+                Lucky Star Cafe adalah tempat nongkrong yang sempurna dengan suasana unik dan nyaman. Kafe kami menawarkan dekorasi Instagrammable dengan desain estetika yang menarik dan modern, ideal untuk berfoto dan bersantai. Menu kami sangat variatif, mulai dari makanan lezat seperti aneka Ramen, Dessert Ice Cream dan Cookies hingga minuman segar dan Iced Coffee Special . Pelayanan yang ramah dan profesional dari staf kami siap membuat kunjungan Anda menjadi lebih menyenangkan. Berlokasi strategis dan mudah dijangkau dari berbagai penjuru kota, Lucky Star Cafe adalah pilihan tepat untuk bertemu teman, mengadakan pertemuan bisnis, atau sekadar bersantai. Lucky Star dan nikmati pengalaman nongkrong yang berbeda.
+            </p>
+        </div>
+    </section>
+    <!-- About selesai -->
+
+    <!-- Menu -->
+     <!-- Menampilkan daftar item menu dengan gambar, nama, harga, dan tombol pemesanan -->
+    <section class="menu" id="menu">
+        <h2>MENU</h2>
+        <div class="list-menu">
+            <div class="items-menu">
+                <img class="img-menu" src="1.jpg" alt="espresso">
+                <h3 class="title-menu">- Coffee -</h3>
+                <p class="harga-menu">Rp 25,000</p>
+                <button class="order-button" onclick="addToCart('Coffee', 25000)">Order Now</button>
+            </div>
+            <div class="items-menu">
+                <img class="img-menu" src="eskrim.jpg" alt="eskrim">
+                <h3 class="title-menu">- Ice Cream -</h3>
+                <p class="harga-menu">Rp 20,000</p>
+                <button class="order-button" onclick="addToCart('Ice Cream', 20000)">Order Now</button>
+            </div>
+            <div class="items-menu">
+                <img class="img-menu" src="cake.jpg" alt="cookies">
+                <h3 class="title-menu">- Cookies -</h3>
+                <p class="harga-menu">Rp 15,000</p>
+                <button class="order-button" onclick="addToCart('Cookies', 15000)">Order Now</button>
+            </div>
+            <div class="items-menu">
+                <img class="img-menu" src="ricebowl.jpg" alt="ramen">
+                <h3 class="title-menu">- Ramen -</h3>
+                <p class="harga-menu">Rp 30,000</p>
+                <button class="order-button" onclick="addToCart('Ramen', 30000)">Order Now</button>
+            </div>                                          
+        </div>
+    </section>
+    <!-- Menu selesai-->
+
+    <!-- Keranjang -->
+     <!-- Menampilkan item yang telah ditambahkan ke keranjang dan tombol checkout -->
+    <section class="cart">
+        <h2>YOUR CART</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total" id="cart-total">Total: Rp 0</div>
+        <button class="cart-button" onclick="checkout()">Checkout</button>
+    </section>
+    <!-- Keranjang selesai -->
+
+    <!-- Promo -->
+     <!-- Menampilkan informasi promosi dengan gambar dan deskripsi -->
+    <section class="promo" id="promo">
+        <h2>PROMO</h2>
+        <div class="promo-item">
+            <img class="img-promo" src="combo.jpeg" alt="combo">
+            <div class="isi-promo">
+                <h2 class="h2-promo">Combo 1</h2>
+                <p class="p-promo">Paket 2 orang ramen beef tori kara dan ramen beef slice kari hanya dengan 57rb</p>
+                <h2 class="h2-promo">Combo 2</h2>
+                <p class="p-promo">Paket 3 orang menu ramen bebas hanya 85rb</p>
+            </div>
+        </div>
+    </section>
+    <!-- Promo selesai -->
+
+    <!-- Info Lokasi dan Waktu -->
+     <!-- Menampilkan peta lokasi cafe dan informasi alamat serta waktu pengoperasionalan cafe -->
+    <section class="info" id="lokasi">
+        <h2> LOKASI &#38; WAKTU</h2>
+        <div class="list-info">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.60965134225!2d107.56075374672221!3d-6.903271949136317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1716460482187!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+            <div class="waktu">
+                <h3 class="h3-waktu">Jl. Manisi No.43, RT.04/RW.09, Cipadung, Kec. Cibiru, Kota Bandung, Jawa Barat 40614</h3>
+                <h3 class="h3-waktu">Waktu : 09.00 - 22.00</h3>
+            </div>
+        </div>
+    </section>
+    <!-- selesai -->
+
+    <!-- Footer -->
+     <!-- Menampilkan logo, tautan media sosial, dan nomor kontak -->
+    <footer class="footer">
+        <h2 class="footer-logo">Lucky Star Cafe</h2>
+        <div class="socials">
+            <a href="https://www.instagram.com/syifa_nrmldaa?igsh=MWp3dWxlazBnM2t2Yg=="><i data-feather="instagram"></i></a>
+            <a href="https://x.com/nrmsyif?t=7bh5T-WC9iPJREE6j3CH1w&s=09"><i data-feather="twitter"></i></a>
+            <a href=""><i data-feather="facebook"></i></a>
+        </div>
+        <h2 class="p-footer">085798651502</h2>
+    </footer>
+    <!-- Footer selesai -->
+    
+
+    <!-- Ikon Feather -->
+     <!-- Untuk mengaktifkan feather setelah halaman dimuat -->
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
+<!-- Akhir dokumen menutup tag dan selesai -->
